@@ -74,5 +74,10 @@ public class FizzBuzzTest {
 	public void test_x2_1() {
 		assertEquals(fizzBuzz.eval(2), "2");
 	}
+	
+	@Test
+	public void test_x7_2() {
+		assertEquals(fizzBuzz.eval(14), "14");
+	}
 
 }
