@@ -10,6 +10,17 @@
 .springBeans
 .sts4-cache
 
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
 
 # Created by https://www.gitignore.io/api/git,java,maven,eclipse,windows
 
