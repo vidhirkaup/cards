@@ -22,13 +22,15 @@ public class NumbersTest extends TestCase {
         assertEquals(-12, numbers.sum(-5,-7));
     }
     public void testSum_with_mix_8_4() {
-        assertEquals(4, numbers.sum(8,-4));
+        assertEquals(4, numbers.sum(8, -4));
     }
-    public void testSum_with_mix_max_min() {
+
+    public void testSum_with_mix_int_max_min() {
         assertEquals(-1, numbers.sum(Integer.MIN_VALUE, Integer.MAX_VALUE));
     }
+
     @Test(expected = ArithmeticException.class)
-    public void testSum_with_exception() {
+    public void testSum_with_int_exception() {
         numbers.sum(Integer.MIN_VALUE, Integer.MIN_VALUE);
     }
 }
