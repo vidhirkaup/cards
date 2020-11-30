@@ -1,36 +1,51 @@
 package com.org.vkaup.numbers;
 
-import junit.framework.TestCase;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
-public class NumbersTest extends TestCase {
+import static org.junit.Assert.assertEquals;
 
-    Numbers numbers;
+public class NumbersTest {
 
+    private Numbers numbers;
+
+    @Before
     public void setUp() throws Exception {
-        super.setUp();
         numbers = new Numbers();
     }
 
+    @After
     public void tearDown() throws Exception {
     }
 
-    public void testSum_with_pos_1_2() {
-        assertEquals(3, numbers.sum(1,2));
+    @Test
+    public void when_pos1_pos2_then_pos3() {
+        assertEquals(3, numbers.sum(1, 2));
     }
-    public void testSum_with_neg_5_7() {
-        assertEquals(-12, numbers.sum(-5,-7));
+
+    @Test
+    public void when_neg5_neg7_then_neg12() {
+        assertEquals(-12, numbers.sum(-5, -7));
     }
-    public void testSum_with_mix_8_4() {
+
+    @Test
+    public void when_pos8_neg4_then_pos4() {
         assertEquals(4, numbers.sum(8, -4));
     }
 
-    public void testSum_with_mix_int_max_min() {
+    @Test
+    public void when_min_max_then_neg1() {
         assertEquals(-1, numbers.sum(Integer.MIN_VALUE, Integer.MAX_VALUE));
     }
 
     @Test(expected = ArithmeticException.class)
-    public void testSum_with_int_exception() {
-        numbers.sum(Integer.MIN_VALUE, Integer.MIN_VALUE);
+    public void when_min_neg10_then_exception() {
+        numbers.sum(Integer.MIN_VALUE, -10);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void when_max_pos10_then_exception() {
+        numbers.sum(Integer.MAX_VALUE, 10);
     }
 }
