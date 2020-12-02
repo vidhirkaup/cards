@@ -4,7 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class NumbersTest {
 
@@ -48,4 +48,20 @@ public class NumbersTest {
     public void when_max_pos10_then_exception() {
         numbers.sum(Integer.MAX_VALUE, 10);
     }
+
+    @Test
+    public void when_x_eq_y_then_true() {
+        assertTrue(numbers.compare(10, 10));
+    }
+
+    @Test
+    public void when_x_gt_y_then_false() {
+        assertFalse(numbers.compare(10, 5));
+    }
+
+    @Test
+    public void when_x_lt_y_then_false() {
+        assertFalse(numbers.compare(-10, 0/0));
+    }
+
 }

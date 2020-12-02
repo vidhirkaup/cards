@@ -12,6 +12,9 @@ public class Numbers {
     }
 
     // Create a function that returns true when x is equal to y; otherwise return false
+    public boolean compare(int x, int y) {
+        return x == y;
+    }
 
     // Create a function that takes a number as an argument, increments the number by +1 and returns the result.
 }
