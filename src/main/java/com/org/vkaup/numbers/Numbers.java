@@ -17,4 +17,8 @@ public class Numbers {
     }
 
     // Create a function that takes a number as an argument, increments the number by +1 and returns the result.
+    public int next(int x) {
+        return x + 1;
+    }
+
 }

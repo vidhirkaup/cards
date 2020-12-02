@@ -61,7 +61,21 @@ public class NumbersTest {
 
     @Test
     public void when_x_lt_y_then_false() {
-        assertFalse(numbers.compare(-10, 0/0));
+        assertFalse(numbers.compare(-10, 10));
+    }
+    @Test
+    public void when_x_eq_10_then_11() {
+        assertEquals(11, numbers.next(10));
+    }
+
+    @Test
+    public void when_x_eq_0_then_1() {
+        assertEquals(1, numbers.next(0));
+    }
+
+    @Test
+    public void when_x_neg5_then_neg4() {
+        assertEquals(-4, numbers.next(-5));
     }
 
 }

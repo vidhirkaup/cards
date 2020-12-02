@@ -21,3 +21,19 @@
    isSameNum(4, 8) ➞ false
    isSameNum(2, 2) ➞  true
    isSameNum(42, 32) ➞  false
+
+4. Return the Next Number from the Integer Passed
+   Create a function that takes a number as an argument, increments the number by +1 and returns the result.
+
+   Examples
+   addition(0) ➞ 1
+   addition(9) ➞ 10
+   addition(-3) ➞ -2
+
+5. Power Calculator
+   Create a function that takes voltage and current and returns the calculated power.
+
+   Examples
+   power(230, 10) ➞ 2300
+   power(110, 3) ➞ 330
+   power(480, 20) ➞ 9600
