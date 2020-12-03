@@ -78,4 +78,19 @@ public class NumbersTest {
         assertEquals(-4, numbers.next(-5));
     }
 
+    @Test
+    public void when_x_230_y_10_then_2300() {
+        assertEquals(2300, numbers.power(230, 10));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_x_neg_y_10_then_exception() {
+        numbers.power(-10, 10);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_x_230_y_neg_then_exception() {
+        numbers.power(230, -10);
+    }
+
 }
