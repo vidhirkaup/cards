@@ -21,16 +21,31 @@ public class TimeUtilTest {
 
     @Test
     public void when_5min_then_300sec() {
-        assertEquals(300, timeUtil.convert(5));
+        assertEquals(300, timeUtil.convertMinsToSeconds(5));
     }
 
     @Test(expected = ArithmeticException.class)
     public void when_max_mins_then_expect_exception() {
-        timeUtil.convert(Integer.MAX_VALUE);
+        timeUtil.convertMinsToSeconds(Integer.MAX_VALUE);
     }
 
-    @Test (expected = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void when_neg_mins_then_expect_exception() {
-        timeUtil.convert(-1);
+        timeUtil.convertMinsToSeconds(-1);
+    }
+
+    @Test
+    public void when_2hours_then_7200() {
+        assertEquals(7200, timeUtil.convertHoursToSeconds(2));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_neg_hours_then_exception() {
+        timeUtil.convertHoursToSeconds(-2);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void when_max_hours_then_exception() {
+        timeUtil.convertHoursToSeconds(Integer.MAX_VALUE);
     }
 }
