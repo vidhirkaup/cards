@@ -29,5 +29,12 @@ public class Numbers {
         return x * y;
     }
 
+    // Find the Perimeter of a Rectangle
+    public int findPerimeter(int x, int y) {
+        if (x <= 0 || y <= 0) {
+            throw new IllegalArgumentException(String.format("input cannot be negative: (%d, %d)", x, y));
+        }
+        return 2 * (x + y);
+    }
 
 }

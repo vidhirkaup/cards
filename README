@@ -45,3 +45,19 @@
    howManySeconds(2) ➞ 7200
    howManySeconds(10) ➞ 36000
    howManySeconds(24) ➞ 86400
+
+7. Find the Perimeter of a Rectangle
+   Create a function that takes length and width and finds the perimeter of a rectangle.
+
+   Examples
+   findPerimeter(6, 7) ➞ 26
+   findPerimeter(20, 10) ➞ 60
+   findPerimeter(2, 9) ➞ 22
+
+8. Are the Numbers Equal?
+   Create a function that takes two integers and checks if they are equal.
+
+   Examples
+   isEqual(5, 6) ➞ false
+   isEqual(1, 1) ➞ true
+   isEqual(36, 35) ➞ false

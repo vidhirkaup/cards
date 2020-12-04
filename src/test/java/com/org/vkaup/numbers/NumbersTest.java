@@ -19,6 +19,7 @@ public class NumbersTest {
     public void tearDown() throws Exception {
     }
 
+    // Returns the sum of 2 int
     @Test
     public void when_pos1_pos2_then_pos3() {
         assertEquals(3, numbers.sum(1, 2));
@@ -49,6 +50,7 @@ public class NumbersTest {
         numbers.sum(Integer.MAX_VALUE, 10);
     }
 
+    // Returns the sum of 2 int
     @Test
     public void when_x_eq_y_then_true() {
         assertTrue(numbers.compare(10, 10));
@@ -63,6 +65,8 @@ public class NumbersTest {
     public void when_x_lt_y_then_false() {
         assertFalse(numbers.compare(-10, 10));
     }
+
+    // Create a function that takes a number as an argument, increments the number by +1 and returns the result.
     @Test
     public void when_x_eq_10_then_11() {
         assertEquals(11, numbers.next(10));
@@ -78,6 +82,7 @@ public class NumbersTest {
         assertEquals(-4, numbers.next(-5));
     }
 
+    // Create a function that takes a number as an argument, increments the number by +1 and returns the result.
     @Test
     public void when_x_230_y_10_then_2300() {
         assertEquals(2300, numbers.power(230, 10));
@@ -93,4 +98,29 @@ public class NumbersTest {
         numbers.power(230, -10);
     }
 
+    // Find the Perimeter of a Rectangle
+    @Test
+    public void when_x_10_y_5_then_30() {
+        assertEquals(30, numbers.findPerimeter(10, 5));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_x_0_then_exception() {
+        numbers.findPerimeter(0, 10);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_x_neg10_then_exception() {
+        numbers.findPerimeter(-10, 10);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_y_0_then_exception() {
+        numbers.findPerimeter(10, 0);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_y_neg10_then_exception() {
+        numbers.findPerimeter(0, -10);
+    }
 }
