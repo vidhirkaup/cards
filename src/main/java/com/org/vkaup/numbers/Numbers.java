@@ -30,11 +30,21 @@ public class Numbers {
     }
 
     // Find the Perimeter of a Rectangle
-    public int findPerimeter(int x, int y) {
+    public int findPerimeter(int x, int y) throws IllegalArgumentException {
         if (x <= 0 || y <= 0) {
             throw new IllegalArgumentException(String.format("input cannot be negative: (%d, %d)", x, y));
         }
         return 2 * (x + y);
     }
+
+    // Are the Numbers Equal?
+    public boolean isEqual(int x, int y) {
+        boolean result = false;
+        if (x == y) {
+            result = true;
+        }
+        return result;
+    }
+
 
 }

@@ -123,4 +123,25 @@ public class NumbersTest {
     public void when_y_neg10_then_exception() {
         numbers.findPerimeter(0, -10);
     }
+
+    // Are the Numbers Equal?
+    @Test
+    public void when_x_5_y_5_then_equal() {
+        assertTrue(numbers.isEqual(5, 5));
+    }
+
+    @Test
+    public void when_x_10_y_45_then_not_equal() {
+        assertFalse(numbers.compare(10, 45));
+    }
+
+    @Test
+    public void when_x_neg10_y_neg10_then_equal() {
+        assertTrue(numbers.compare(-10, -10));
+    }
+
+    @Test
+    public void when_x_neg10_y_neg56_then_not_equal() {
+        assertFalse(numbers.compare(-10, -56));
+    }
 }
