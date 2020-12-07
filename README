@@ -61,3 +61,32 @@
    isEqual(5, 6) ➞ false
    isEqual(1, 1) ➞ true
    isEqual(36, 35) ➞ false
+
+9. Maximum Edge of a Triangle
+   Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers.
+
+   Examples
+   nextEdge(8, 10) ➞ 17
+   nextEdge(5, 7) ➞ 11
+   nextEdge(9, 2) ➞ 10
+
+10. Area of a Triangle
+    Write a function that takes the base and height of a triangle and return its area.
+
+    Examples
+    triArea(3, 2) ➞ 3
+    triArea(7, 4) ➞ 14
+    triArea(10, 10) ➞ 50
+
+11. Using the "&&" Operator
+    Java has a logical operator &&. The && operator takes two boolean values, and returns true if both values are true.
+
+    Consider a && b:
+    a is checked if it is true or false.
+    If a is false, false is returned.
+    b is checked if it is true or false.
+    If b is false, false is returned.
+    Otherwise, true is returned (as both a and b are therefore true ).
+    The && operator will only return true for true && true.
+
+    Make a function using the && operator.
