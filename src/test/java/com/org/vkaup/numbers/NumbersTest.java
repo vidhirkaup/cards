@@ -144,4 +144,29 @@ public class NumbersTest {
     public void when_x_neg10_y_neg56_then_not_equal() {
         assertFalse(numbers.compare(-10, -56));
     }
+
+    @Test
+    public void when_x_5_y_10_then_next_14() {
+        assertEquals(14, numbers.nextEdge(5, 10));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_x_neg10_then_next_exception() {
+        numbers.nextEdge(-10, 5);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_y_neg5_then_next_exception() {
+        numbers.nextEdge(10, -5);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_x_0_then_next_exception() {
+        numbers.nextEdge(0, 5);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_y_0_then_next_exception() {
+        numbers.nextEdge(10, 0);
+    }
 }

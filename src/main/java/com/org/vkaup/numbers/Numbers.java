@@ -46,5 +46,11 @@ public class Numbers {
         return result;
     }
 
-
+    // Maximum Edge of a Triangle
+    public int nextEdge(int x, int y) {
+        if (x <= 0 || y <= 0) {
+            throw new IllegalArgumentException(String.format("input cannot be negative: (%d, %d)", x, y));
+        }
+        return (x + y) - 1;
+    }
 }
