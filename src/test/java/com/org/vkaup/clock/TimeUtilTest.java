@@ -19,6 +19,7 @@ public class TimeUtilTest {
     public void tearDown() throws Exception {
     }
 
+    // 2. rite a function that takes an integer minutes and converts it to seconds.
     @Test
     public void when_5min_then_300sec() {
         assertEquals(300, timeUtil.convertMinsToSeconds(5));
@@ -34,6 +35,7 @@ public class TimeUtilTest {
         timeUtil.convertMinsToSeconds(-1);
     }
 
+    // 6. Write a function that converts hours into seconds.
     @Test
     public void when_2hours_then_7200() {
         assertEquals(7200, timeUtil.convertHoursToSeconds(2));

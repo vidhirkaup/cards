@@ -53,4 +53,14 @@ public class Numbers {
         }
         return (x + y) - 1;
     }
+
+    // Write a function that takes the base and height of a triangle and return its area.
+    public int triArea(int base, int height) {
+        if (base <= 0 || height <= 0) {
+            throw new IllegalArgumentException(String.format("input has to be positive: (%d, %d)", base, height));
+        }
+        return (base * height) / 2;
+    }
+
+
 }

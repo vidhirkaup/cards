@@ -19,7 +19,7 @@ public class NumbersTest {
     public void tearDown() throws Exception {
     }
 
-    // Returns the sum of 2 int
+    // 1. Returns the sum of 2 int
     @Test
     public void when_pos1_pos2_then_pos3() {
         assertEquals(3, numbers.sum(1, 2));
@@ -50,7 +50,7 @@ public class NumbersTest {
         numbers.sum(Integer.MAX_VALUE, 10);
     }
 
-    // Returns the sum of 2 int
+    // 3. Create a function that returns true when x is equal to y; otherwise return false.
     @Test
     public void when_x_eq_y_then_true() {
         assertTrue(numbers.compare(10, 10));
@@ -66,7 +66,7 @@ public class NumbersTest {
         assertFalse(numbers.compare(-10, 10));
     }
 
-    // Create a function that takes a number as an argument, increments the number by +1 and returns the result.
+    // 4. Create a function that takes a number as an argument, increments the number by +1 and returns the result.
     @Test
     public void when_x_eq_10_then_11() {
         assertEquals(11, numbers.next(10));
@@ -82,7 +82,7 @@ public class NumbersTest {
         assertEquals(-4, numbers.next(-5));
     }
 
-    // Create a function that takes a number as an argument, increments the number by +1 and returns the result.
+    // 5. Create a function that takes voltage and current and returns the calculated power.
     @Test
     public void when_x_230_y_10_then_2300() {
         assertEquals(2300, numbers.power(230, 10));
@@ -98,7 +98,7 @@ public class NumbersTest {
         numbers.power(230, -10);
     }
 
-    // Find the Perimeter of a Rectangle
+    // 7. Find the Perimeter of a Rectangle
     @Test
     public void when_x_10_y_5_then_30() {
         assertEquals(30, numbers.findPerimeter(10, 5));
@@ -124,7 +124,7 @@ public class NumbersTest {
         numbers.findPerimeter(0, -10);
     }
 
-    // Are the Numbers Equal?
+    // 8. Are the Numbers Equal?
     @Test
     public void when_x_5_y_5_then_equal() {
         assertTrue(numbers.isEqual(5, 5));
@@ -145,6 +145,7 @@ public class NumbersTest {
         assertFalse(numbers.compare(-10, -56));
     }
 
+    // 9. Create a function that finds the maximum range of a triangle's third edge, where the side lengths are all integers.
     @Test
     public void when_x_5_y_10_then_next_14() {
         assertEquals(14, numbers.nextEdge(5, 10));
@@ -168,5 +169,31 @@ public class NumbersTest {
     @Test(expected = IllegalArgumentException.class)
     public void when_y_0_then_next_exception() {
         numbers.nextEdge(10, 0);
+    }
+
+    // 10. Write a function that takes the base and height of a triangle and return its area.
+    @Test
+    public void when_base_5_height_10_then_area_25() {
+        assertEquals(25, numbers.triArea(5, 10));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_base_0_then_exception(){
+        numbers.triArea(0, 10);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_base_neg_then_exception(){
+        numbers.triArea(-5, 10);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_height_0_then_exception(){
+        numbers.triArea(10, 0);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_height_neg_then_exception(){
+        numbers.triArea(10, -10);
     }
 }
