@@ -188,12 +188,68 @@ public class NumbersTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void when_height_0_then_exception(){
+    public void when_height_0_then_exception() {
         numbers.triArea(10, 0);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void when_height_neg_then_exception(){
+    public void when_height_neg_then_exception() {
         numbers.triArea(10, -10);
     }
+
+    // 11. Create a method that takes an integer as its only argument and returns true if it's less than or equal to zero, otherwise return false.
+    @Test
+    public void when_x_neg_then_true() {
+        assertTrue(numbers.lessThanOrEqualToZero(-10));
+    }
+
+    @Test
+    public void when_x_0_then_true() {
+        assertTrue(numbers.lessThanOrEqualToZero(0));
+    }
+
+    @Test
+    public void when_x_pos_then_false() {
+        assertFalse(numbers.lessThanOrEqualToZero(10));
+    }
+
+    // 13. There is a single operator in Java, capable of providing the remainder of a division operation. Two numbers are passed as parameters. The first parameter divided by the second parameter will have a remainder, possibly zero. Return that value.
+    @Test
+    public void when_x_1_y_3_then_1() {
+        assertEquals(1, numbers.remainder(1, 3));
+    }
+
+    @Test
+    public void when_x_3_y_4_then_3() {
+        assertEquals(3, numbers.remainder(3, 4));
+    }
+
+    @Test
+    public void when_x_0_y_0_then_0() {
+        assertEquals(0, numbers.remainder(5, 5));
+    }
+
+
+    // ??. Java has a logical operator &&. The && operator takes two boolean values, and returns true if both values are true.
+    @Test
+    public void when_x_T_y_T_then_T() {
+        assertTrue(numbers.and(true, true));
+    }
+
+    @Test
+    public void when_x_T_y_F_then_F() {
+        assertFalse(numbers.and(true, false));
+    }
+
+    @Test
+    public void when_x_F_y_T_then_F() {
+        assertFalse(numbers.and(false, true));
+    }
+
+    @Test
+    public void when_x_F_y_F_then_F() {
+        assertFalse(numbers.and(false, false));
+    }
+
+
 }

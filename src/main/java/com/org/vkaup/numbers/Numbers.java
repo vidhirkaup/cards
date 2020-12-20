@@ -47,20 +47,35 @@ public class Numbers {
     }
 
     // Maximum Edge of a Triangle
-    public int nextEdge(int x, int y) {
+    public int nextEdge(int x, int y) throws IllegalArgumentException {
         if (x <= 0 || y <= 0) {
             throw new IllegalArgumentException(String.format("input cannot be negative: (%d, %d)", x, y));
         }
         return (x + y) - 1;
     }
 
-    // Write a function that takes the base and height of a triangle and return its area.
-    public int triArea(int base, int height) {
+    // 10. Write a function that takes the base and height of a triangle and return its area.
+    public int triArea(int base, int height) throws IllegalArgumentException {
         if (base <= 0 || height <= 0) {
             throw new IllegalArgumentException(String.format("input has to be positive: (%d, %d)", base, height));
         }
         return (base * height) / 2;
     }
 
+    // 11. Create a method that takes an integer as its only argument and returns true if it's less than or equal to zero, otherwise return false.
+    public boolean lessThanOrEqualToZero(int x) {
+        return (x <= 0 ? true : false);
+    }
+
+    // 13. There is a single operator in Java, capable of providing the remainder of a division operation. Two numbers are passed as parameters. The first parameter divided by the second parameter will have a remainder, possibly zero. Return that value.
+    public int remainder(int x, int y) {
+        return x % y;
+    }
+
+
+    // ??. Java has a logical operator &&. The && operator takes two boolean values, and returns true if both values are true.
+    public boolean and(boolean x, boolean y) {
+        return x && y;
+    }
 
 }

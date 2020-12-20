@@ -28,4 +28,15 @@ public class TimeUtil {
 
         return (int) sec;
     }
+
+    // 12. Create a function that takes the age and return the age in days.
+    public int calcAge(int age) throws IllegalArgumentException {
+        if (age < 0) {
+            throw new IllegalArgumentException(String.format("age should be positive: (%d)", age));
+        }
+        return age * 365;
+    }
+
+
+
 }

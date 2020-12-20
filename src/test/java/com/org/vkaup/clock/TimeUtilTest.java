@@ -50,4 +50,20 @@ public class TimeUtilTest {
     public void when_max_hours_then_exception() {
         timeUtil.convertHoursToSeconds(Integer.MAX_VALUE);
     }
+
+    // 12. Create a function that takes the age and return the age in days.
+    @Test
+    public void when_age_10_then_3650() {
+        assertEquals(3650, timeUtil.calcAge(10));
+    }
+
+    @Test
+    public void when_age_0_then_0() {
+        assertEquals(0, timeUtil.calcAge(0));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_age_neg_then_exception() {
+        timeUtil.calcAge(-10);
+    }
 }
