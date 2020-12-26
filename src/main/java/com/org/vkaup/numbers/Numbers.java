@@ -72,10 +72,12 @@ public class Numbers {
         return x % y;
     }
 
+    public int calcPoints(int wins, int draws, int losses) {
+        return (wins * 3) + (draws * 1);
+    }
 
     // ??. Java has a logical operator &&. The && operator takes two boolean values, and returns true if both values are true.
     public boolean and(boolean x, boolean y) {
         return x && y;
     }
-
 }

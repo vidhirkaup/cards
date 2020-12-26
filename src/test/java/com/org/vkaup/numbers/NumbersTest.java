@@ -251,5 +251,20 @@ public class NumbersTest {
         assertFalse(numbers.and(false, false));
     }
 
+    @Test
+    public void when_3_wins_4_draws_1_loss_then_points_13() {
+        assertEquals(13, numbers.calcPoints(3, 4, 2));
+    }
+
+    @Test
+    public void when_5_wins_0_draws_2_loss_then_points_15() {
+        assertEquals(15, numbers.calcPoints(5, 0, 2));
+    }
+
+    @Test
+    public void when_0_wins_0_draws_1_loss_then_points_15() {
+        assertEquals(0, numbers.calcPoints(0, 0, 1));
+    }
+
 
 }
