@@ -72,7 +72,14 @@ public class Numbers {
         return x % y;
     }
 
-    public int calcPoints(int wins, int draws, int losses) {
+    // 14. Create a function that takes the number of wins, draws and losses and calculates the number of points a football team has obtained so far.
+    //    - wins get 3 points
+    //    - draws get 1 point
+    //    - losses get 0 points
+    public int calcPoints(int wins, int draws, int losses) throws IllegalArgumentException {
+        if (wins < 0 || draws < 0 || losses < 0) {
+            throw new IllegalArgumentException(String.format("need positive inputs only: (%d, %d, %d)", wins, draws, losses));
+        }
         return (wins * 3) + (draws * 1);
     }
 

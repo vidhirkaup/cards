@@ -229,6 +229,36 @@ public class NumbersTest {
         assertEquals(0, numbers.remainder(5, 5));
     }
 
+//    14. Create a function that takes the number of wins, draws and losses and calculates the number of points a football team has obtained so far.
+    @Test
+    public void when_3_wins_4_draws_1_loss_then_points_13() {
+        assertEquals(13, numbers.calcPoints(3, 4, 2));
+    }
+
+    @Test
+    public void when_5_wins_0_draws_2_loss_then_points_15() {
+        assertEquals(15, numbers.calcPoints(5, 0, 2));
+    }
+
+    @Test
+    public void when_0_wins_0_draws_1_loss_then_points_15() {
+        assertEquals(0, numbers.calcPoints(0, 0, 1));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_neg_wins_then_exception() {
+        numbers.calcPoints(-1, 0, 1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_neg_draws_then_exception() {
+        numbers.calcPoints(0, -1, 1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_neg_loss_then_exception() {
+        numbers.calcPoints(0, 0, -1);
+    }
 
     // ??. Java has a logical operator &&. The && operator takes two boolean values, and returns true if both values are true.
     @Test
@@ -251,20 +281,7 @@ public class NumbersTest {
         assertFalse(numbers.and(false, false));
     }
 
-    @Test
-    public void when_3_wins_4_draws_1_loss_then_points_13() {
-        assertEquals(13, numbers.calcPoints(3, 4, 2));
-    }
 
-    @Test
-    public void when_5_wins_0_draws_2_loss_then_points_15() {
-        assertEquals(15, numbers.calcPoints(5, 0, 2));
-    }
-
-    @Test
-    public void when_0_wins_0_draws_1_loss_then_points_15() {
-        assertEquals(0, numbers.calcPoints(0, 0, 1));
-    }
 
 
 }

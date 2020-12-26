@@ -113,16 +113,15 @@
     footballPoints(5, 0, 2) ➞ 15
     footballPoints(0, 0, 1) ➞ 0
 
->>>>>>>>>>>>>>>>>>>>>>>>>
 15. Return Something to Me!
     Write a function that returns the string "something" joined with a space " " and the given argument a.
-
     Examples
     giveMeSomething("is better than nothing") ➞ "something is better than nothing"
     giveMeSomething("Bob Jane") ➞ "something Bob Jane"
     giveMeSomething("something") ➞ "something something"
 
 
+>>>>>>>>>>>>>>>>>>>>>>>>>
 16. Less Than 100?
     Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
 
