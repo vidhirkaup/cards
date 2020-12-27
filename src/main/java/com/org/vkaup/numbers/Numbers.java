@@ -83,6 +83,11 @@ public class Numbers {
         return (wins * 3) + (draws * 1);
     }
 
+    // 16. Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
+    public boolean sumLessThan100(int x, int y) {
+        return (x + y < 100) ? true : false;
+    }
+
     // ??. Java has a logical operator &&. The && operator takes two boolean values, and returns true if both values are true.
     public boolean and(boolean x, boolean y) {
         return x && y;

@@ -121,7 +121,6 @@
     giveMeSomething("something") ➞ "something something"
 
 
->>>>>>>>>>>>>>>>>>>>>>>>>
 16. Less Than 100?
     Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
 
@@ -131,6 +130,37 @@
     lessThan100(83, 34) ➞ false
     // 83 + 34 = 117
     lessThan100(3, 77) ➞ true
+
+
+17. The Farm Problem
+    In this challenge, a farmer is asking you to tell him how many legs can be counted among all his animals.
+    The farmer breeds three species:
+    chickens = 2 legs
+    cows = 4 legs
+    pigs = 4 legs
+    The farmer has counted his animals and he gives you a subtotal for each species.
+    You have to implement a function that returns the total number of legs of all the animals.
+
+    Examples
+    animals(2, 3, 5) ➞ 36
+    animals(1, 2, 3) ➞ 22
+    animals(5, 2, 8) ➞ 50
+
+>>>>>>>>>>>>>>>>>>>>>>>>>
+18. Check if an Integer is Divisible By Five
+    Create a function that returns true if an integer is evenly divisible by 5, and false otherwise.
+    Examples
+    divisibleByFive(5) ➞ true
+    divisibleByFive(-55) ➞ true
+    divisibleByFive(37) ➞ false
+
+19. Return the First Element of an Array
+    Create a function that takes an array containing only numbers and return the first element.
+    Examples
+    getFirstValue([1, 2, 3]) ➞ 1
+    getFirstValue([80, 5, 100]) ➞ 80
+    getFirstValue([-500, 0, 50]) ➞ -500
+
 
 ??. Using the "&&" Operator
     Java has a logical operator &&. The && operator takes two boolean values, and returns true if both values are true.

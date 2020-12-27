@@ -281,7 +281,19 @@ public class NumbersTest {
         assertFalse(numbers.and(false, false));
     }
 
-
+    // 16. Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
+    @Test
+    public void when_60_and_20_then_true() {
+        assertTrue(numbers.sumLessThan100(60, 20));
+    }
+    @Test
+    public void when_60_and_40_then_true() {
+        assertFalse(numbers.sumLessThan100(60, 40));
+    }
+    @Test
+    public void when_60_and_60_then_false() {
+        assertFalse(numbers.sumLessThan100(60, 60));
+    }
 
 
 }
