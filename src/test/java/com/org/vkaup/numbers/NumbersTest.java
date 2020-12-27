@@ -295,5 +295,28 @@ public class NumbersTest {
         assertFalse(numbers.sumLessThan100(60, 60));
     }
 
+    // 17. The Farm Problem
+    @Test
+    public void when_chickens_2_cows_3_pigs_5_then_36(){
+        assertEquals(36, numbers.countLegs(2, 3, 5));
+    }
+
+    @Test
+    public void when_chickens_5_cows_2_pigs_8_then_50(){
+        assertEquals(50, numbers.countLegs(5, 2, 8));
+    }
+
+    @Test
+    public void when_chickens_neg_cows_2_pigs_8_then_40(){
+        assertEquals(40, numbers.countLegs(-5, 2, 8));
+    }
+    @Test
+    public void when_chickens_5_cows_neg_pigs_8_then_42(){
+        assertEquals(42, numbers.countLegs(5, -2, 8));
+    }
+    @Test
+    public void when_chickens_5_cows_2_pigs_neg_then_18(){
+        assertEquals(18, numbers.countLegs(5, 2, -8));
+    }
 
 }

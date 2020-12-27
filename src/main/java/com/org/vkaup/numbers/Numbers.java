@@ -88,6 +88,11 @@ public class Numbers {
         return (x + y < 100) ? true : false;
     }
 
+    // 17. The Farm Problem
+    public int countLegs(int chickens, int cows, int pigs) throws IllegalArgumentException {
+        return (chickens > 0 ? chickens * 2 : 0) + (cows > 0 ? cows * 4 : 0 ) + (pigs > 0 ? pigs * 4 : 0);
+    }
+
     // ??. Java has a logical operator &&. The && operator takes two boolean values, and returns true if both values are true.
     public boolean and(boolean x, boolean y) {
         return x && y;
